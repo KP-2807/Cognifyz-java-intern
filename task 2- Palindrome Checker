@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+
+
+
+public class PalindromeChecker {
+    public static void main(String []pl) {
+        System.out.println("Palindrome Checker");
+        System.out.println("Enter a String:");
+        Scanner scan = new Scanner(System.in);
+
+        String phrase = scan.next();
+
+        char a[]= phrase.toCharArray();
+
+        String revPhrase="";
+
+        for(int i=a.length-1; i>=0; i--) {
+            revPhrase+=a[i];
+        }
+        System.out.println("The Reverse String:"+revPhrase);
+        boolean check=phrase.equalsIgnoreCase(revPhrase);
+        if(check==true)
+            System.out.println("Given string "+ phrase + " is a Palindrome");
+
+        else System.out.println("Given string " + phrase + " is not a Palindrome");
+    }
+}
